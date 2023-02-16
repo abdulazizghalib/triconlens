@@ -1,0 +1,10 @@
+
+<?php
+/**
+ * Implements hook_user_presave().
+ */
+function triconlens_user_user_presave(Drupal\Core\Entity\EntityInterface $entity) {
+ if($entity->isNew()) {
+ $entity->status->value = 1;
+ }
+}
